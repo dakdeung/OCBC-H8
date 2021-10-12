@@ -25,7 +25,7 @@ public class nomor1
          for (int j = 0; j < (ctr / 2); j++) {
             Console.Write(huruf--);
          }
-         ctr = ctr + 2;
+         ctr += 2;
          huruf = 'A';
          Console.Write("\n");
       }

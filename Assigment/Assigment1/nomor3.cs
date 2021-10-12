@@ -2,15 +2,15 @@ using System;
 
 public class nomor3{
     public static void Main(){
-        int h;
-        Console.Write("Masukkan Nilai N = ");
+        int total;
+        Console.Write("Masukkan Nilai = ");
         int n = int.Parse(Console.In.ReadLine());
-        h = 1;
+        total = 1;
         Console.Write(n + "! = ");
 
         for (int i = 1; i <= n; i++)
         {
-            h = h * i;
+            total = total * i;
 
             Console.Write(n - (i - 1));
             if (i != n)
@@ -22,7 +22,7 @@ public class nomor3{
             Console.Write(n + "!");
             Console.Write(" = ");
 
-            Console.WriteLine(h);
+            Console.WriteLine(total);
             Console.ReadLine();
     }
 }
