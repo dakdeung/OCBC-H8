@@ -21,7 +21,7 @@ public class data4
         {
             for(j = 0; j<2; j++)
             {
-                Console.WriteLine(data4[i,j]+" ");
+                Console.Write(data4[i,j]+" ");
             }
             Console.WriteLine();
         }
