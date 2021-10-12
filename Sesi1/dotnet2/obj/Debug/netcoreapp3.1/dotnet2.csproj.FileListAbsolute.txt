@@ -1,0 +1,13 @@
+E:\Project\OCBC\Sesi 1\dotnet2\bin\Debug\netcoreapp3.1\dotnet2.exe
+E:\Project\OCBC\Sesi 1\dotnet2\bin\Debug\netcoreapp3.1\dotnet2.deps.json
+E:\Project\OCBC\Sesi 1\dotnet2\bin\Debug\netcoreapp3.1\dotnet2.runtimeconfig.json
+E:\Project\OCBC\Sesi 1\dotnet2\bin\Debug\netcoreapp3.1\dotnet2.runtimeconfig.dev.json
+E:\Project\OCBC\Sesi 1\dotnet2\bin\Debug\netcoreapp3.1\dotnet2.dll
+E:\Project\OCBC\Sesi 1\dotnet2\bin\Debug\netcoreapp3.1\dotnet2.pdb
+E:\Project\OCBC\Sesi 1\dotnet2\obj\Debug\netcoreapp3.1\dotnet2.csprojAssemblyReference.cache
+E:\Project\OCBC\Sesi 1\dotnet2\obj\Debug\netcoreapp3.1\dotnet2.AssemblyInfoInputs.cache
+E:\Project\OCBC\Sesi 1\dotnet2\obj\Debug\netcoreapp3.1\dotnet2.AssemblyInfo.cs
+E:\Project\OCBC\Sesi 1\dotnet2\obj\Debug\netcoreapp3.1\dotnet2.csproj.CoreCompileInputs.cache
+E:\Project\OCBC\Sesi 1\dotnet2\obj\Debug\netcoreapp3.1\dotnet2.dll
+E:\Project\OCBC\Sesi 1\dotnet2\obj\Debug\netcoreapp3.1\dotnet2.pdb
+E:\Project\OCBC\Sesi 1\dotnet2\obj\Debug\netcoreapp3.1\dotnet2.genruntimeconfig.cache
