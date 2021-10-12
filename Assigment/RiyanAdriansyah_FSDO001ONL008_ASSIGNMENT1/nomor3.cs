@@ -19,10 +19,6 @@ public class nomor3{
             }
         }
             Console.WriteLine();
-            Console.Write(n + "!");
-            Console.Write(" = ");
-
-            Console.WriteLine(total);
-            Console.ReadLine();
+            Console.Write($"Nilai faktorial dari {n} adalah {total}");
     }
 }

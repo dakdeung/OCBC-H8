@@ -5,7 +5,7 @@ public class nomor2
     public static void Main()
     {
       int baris,angka = 1;
-      int ctr = 5;    
+      int ctr = 1;    
    
       Console.Write("Masukan jumlah baris : ");
       baris = int.Parse(Console.ReadLine());    
