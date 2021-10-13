@@ -107,7 +107,6 @@ namespace pro3
             Console.Write("Bilangan 2: ");
             bilangan2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("");
-            
             over.bilangan(bilangan1, bilangan2);
             over.penjumlahanPerkaliandll();
             Console.WriteLine("");
