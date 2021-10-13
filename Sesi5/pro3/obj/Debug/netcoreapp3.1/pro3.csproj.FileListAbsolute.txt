@@ -1,0 +1,13 @@
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\obj\Debug\netcoreapp3.1\pro3.csprojAssemblyReference.cache
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\obj\Debug\netcoreapp3.1\pro3.AssemblyInfoInputs.cache
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\obj\Debug\netcoreapp3.1\pro3.AssemblyInfo.cs
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\obj\Debug\netcoreapp3.1\pro3.csproj.CoreCompileInputs.cache
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\bin\Debug\netcoreapp3.1\pro3.exe
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\bin\Debug\netcoreapp3.1\pro3.deps.json
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\bin\Debug\netcoreapp3.1\pro3.runtimeconfig.json
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\bin\Debug\netcoreapp3.1\pro3.runtimeconfig.dev.json
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\bin\Debug\netcoreapp3.1\pro3.dll
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\bin\Debug\netcoreapp3.1\pro3.pdb
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\obj\Debug\netcoreapp3.1\pro3.dll
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\obj\Debug\netcoreapp3.1\pro3.pdb
+E:\Project\OCBC\OCBC-H8\Sesi5\pro3\obj\Debug\netcoreapp3.1\pro3.genruntimeconfig.cache

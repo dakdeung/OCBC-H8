@@ -1,0 +1,13 @@
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\obj\Debug\netcoreapp3.1\pro2.csprojAssemblyReference.cache
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\obj\Debug\netcoreapp3.1\pro2.AssemblyInfoInputs.cache
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\obj\Debug\netcoreapp3.1\pro2.AssemblyInfo.cs
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\obj\Debug\netcoreapp3.1\pro2.csproj.CoreCompileInputs.cache
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\bin\Debug\netcoreapp3.1\pro2.exe
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\bin\Debug\netcoreapp3.1\pro2.deps.json
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\bin\Debug\netcoreapp3.1\pro2.runtimeconfig.json
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\bin\Debug\netcoreapp3.1\pro2.runtimeconfig.dev.json
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\bin\Debug\netcoreapp3.1\pro2.dll
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\bin\Debug\netcoreapp3.1\pro2.pdb
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\obj\Debug\netcoreapp3.1\pro2.dll
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\obj\Debug\netcoreapp3.1\pro2.pdb
+E:\Project\OCBC\OCBC-H8\Sesi5\pro2\obj\Debug\netcoreapp3.1\pro2.genruntimeconfig.cache
