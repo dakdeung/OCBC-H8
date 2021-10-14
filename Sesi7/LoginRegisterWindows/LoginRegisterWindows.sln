@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginRegisterWindows", "LoginRegisterWindows\LoginRegisterWindows.csproj", "{908DC546-C195-4DA0-9E66-DD53EBC087D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CA1F9D37-3C82-4D0B-BD7A-45B34698C60C}"
+	ProjectSection(SolutionItems) = preProject
+		Config.cs = Config.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{908DC546-C195-4DA0-9E66-DD53EBC087D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908DC546-C195-4DA0-9E66-DD53EBC087D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908DC546-C195-4DA0-9E66-DD53EBC087D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908DC546-C195-4DA0-9E66-DD53EBC087D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B27AECC6-A36E-485E-84E2-BC0113D30D2D}
+	EndGlobalSection
+EndGlobal
