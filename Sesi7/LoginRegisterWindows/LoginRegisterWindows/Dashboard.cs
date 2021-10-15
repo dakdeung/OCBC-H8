@@ -45,7 +45,7 @@ namespace LoginRegisterWindows
         private void getData()
         {
             db.ExecuteSelect("SELECT * FROM `user_info` ");
-            dataGridView1.set
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
