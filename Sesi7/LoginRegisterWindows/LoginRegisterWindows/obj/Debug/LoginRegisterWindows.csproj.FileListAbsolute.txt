@@ -35,3 +35,4 @@ E:\Project\OCBC\OCBC-H8\Sesi7\LoginRegisterWindows\LoginRegisterWindows\bin\Debu
 E:\Project\OCBC\OCBC-H8\Sesi7\LoginRegisterWindows\LoginRegisterWindows\bin\Debug\Renci.SshNet.dll
 E:\Project\OCBC\OCBC-H8\Sesi7\LoginRegisterWindows\LoginRegisterWindows\bin\Debug\Renci.SshNet.xml
 E:\Project\OCBC\OCBC-H8\Sesi7\LoginRegisterWindows\LoginRegisterWindows\bin\Debug\Renci.SshNet.Async.xml
+E:\Project\OCBC\OCBC-H8\Sesi7\LoginRegisterWindows\LoginRegisterWindows\obj\Debug\LoginRegisterWindows.Dashboard.resources

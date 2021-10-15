@@ -78,7 +78,6 @@ public string server = "127.0.0.1";
 				MySqlDataAdapter da2 = new MySqlDataAdapter(RecordSource, Connection);
 
 				DataSet tempds = new DataSet();
-				da2.Fill(tempds, ConnectionType);
 				da2.Fill(tempds);
 			}
 			catch (Exception e)
