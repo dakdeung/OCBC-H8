@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace LoginRegisterWindows
 {
+
     public partial class Dashboard : Form
     {
+        private static Array ListID;
+        private static Array ListFirstname;
+        private static Array ListLastname;
+        private static Array ListTelephone;
+        private static Array ListAddress;
         Config db = new Config();
         public Dashboard(string nama, string username)
         {
@@ -39,6 +45,7 @@ namespace LoginRegisterWindows
         private void getData()
         {
             db.ExecuteSelect("SELECT * FROM `user_info` ");
+            dataGridView1.set
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
