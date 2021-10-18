@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AZfAQMFZJwFbF7oiKbBPSsDlhREIp5UtPwHmUGCm4Rrh31Zb+mw8YKWkXyo//naERoyFG5trFWD4lpCpHjx1ig==",
+  "dgSpecHash": "ycftooWyljIDLHcRXyGnlVeLrDT6j1aDuqWL8mEuxgDL7LK4es1xJZqPM1yrpwN7+BkA0QhJB3GPxfzAnjTTtw==",
   "success": true,
   "projectFilePath": "E:\\Project\\OCBC\\OCBC-H8\\Assigment\\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\\MovieApp\\MovieApp.csproj",
   "expectedPackageFiles": [
@@ -46,7 +46,8 @@
     "C:\\Users\\riyan\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\riyan\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\riyan\\.nuget\\packages\\system.text.encoding.codepages\\4.4.0\\system.text.encoding.codepages.4.4.0.nupkg.sha512",
-    "C:\\Users\\riyan\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\riyan\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\riyan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.20\\microsoft.netcore.app.host.win-x64.3.1.20.nupkg.sha512"
   ],
   "logs": []
 }

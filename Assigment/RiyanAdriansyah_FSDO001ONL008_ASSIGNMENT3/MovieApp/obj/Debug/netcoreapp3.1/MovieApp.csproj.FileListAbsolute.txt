@@ -1,11 +1,9 @@
-E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.csprojAssemblyReference.cache
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.AssemblyInfoInputs.cache
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.AssemblyInfo.cs
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.csproj.CoreCompileInputs.cache
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.MvcApplicationPartsAssemblyInfo.cache
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\appsettings.json
-E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\MovieApp.exe
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\MovieApp.deps.json
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\MovieApp.runtimeconfig.json
@@ -41,7 +39,6 @@ E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\Movi
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.RazorTargetAssemblyInfo.cache
-E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.csproj.CopyComplete
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\staticwebassets\MovieApp.StaticWebAssets.Manifest.cache
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\staticwebassets\MovieApp.StaticWebAssets.xml
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.dll
@@ -52,3 +49,6 @@ E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\Movi
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.MvcApplicationPartsAssemblyInfo.cs
+E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.csproj.AssemblyReference.cache
+E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.GeneratedMSBuildEditorConfig.editorconfig
+E:\Project\OCBC\OCBC-H8\Assigment\RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3\MovieApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\MovieApp.styles.css
