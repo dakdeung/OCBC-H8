@@ -1,6 +1,6 @@
 Nama Lengkap		: Riyan Adriansyah
 Nomor Peserta		: 008 (FSDO001ONL008)
-Github Link		: https://github.com/clearyn/OCBC-H8/tree/main/SESI10/Assignment3
+Github Link		: https://github.com/dakdeung/OCBC-H8/tree/main/Assigment/RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3
 
 Langkah Penggunaan:
 1. Download dan extract RiyanAdriansyah_FSDO001ONL008_ASSIGNMENT3
