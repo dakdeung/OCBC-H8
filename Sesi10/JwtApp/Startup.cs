@@ -37,10 +37,46 @@ namespace JwtApp
             services.AddControllers();
 
             //Swagger
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "JwtApp", Version = "v1" });
-            });
+            services
+                .AddSwaggerGen(swagger =>
+                {
+                    swagger
+                        .SwaggerDoc("v1",
+                        new OpenApiInfo
+                        {
+                            Title = "TodoApp",
+                            Version = "v1",
+                            Description =
+                                "Authentication and Authorization in ASP.NET 5 with JWT and Swagger"
+                        });
+
+                    // To Enable authorization using Swagger (JWT)
+                    swagger
+                        .AddSecurityDefinition("Bearer",
+                        new OpenApiSecurityScheme()
+                        {
+                            Name = "Authorization",
+                            Type = SecuritySchemeType.ApiKey,
+                            Scheme = "Bearer",
+                            BearerFormat = "JWT",
+                            In = ParameterLocation.Header,
+                            Description =
+                                "Enter 'Bearer' [space] and then your valid token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\""
+                        });
+                    swagger
+                        .AddSecurityRequirement(new OpenApiSecurityRequirement {
+                            {
+                                new OpenApiSecurityScheme {
+                                    Reference =
+                                        new OpenApiReference {
+                                            Type = ReferenceType.SecurityScheme,
+                                            Id = "Bearer"
+                                        }
+                                },
+                                new string[] { }
+                            }
+                        });
+                });
 
             //Database
             services.AddDbContext<ApiDbContext>(options =>
@@ -51,26 +87,31 @@ namespace JwtApp
             //JWT
             services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
 
-            services.AddAuthentication(options => {
+            services.AddAuthentication(options =>
+            {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-            .AddJwtBearer(jwt => {
+            .AddJwtBearer(jwt =>
+            {
                 var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
 
                 jwt.SaveToken = true;
-                jwt.TokenValidationParameters = new TokenValidationParameters {
+                jwt.TokenValidationParameters = new TokenValidationParameters
+                {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
-                    ValidateAudience =false,
+                    ValidateAudience = false,
                     ValidateLifetime = true,
                     RequireExpirationTime = false
                 };
 
                 services.AddSingleton(jwt.TokenValidationParameters);
             });
+
+
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<ApiDbContext>();

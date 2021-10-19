@@ -327,7 +327,7 @@ namespace JwtApp.Controllers
                 IsRevoked = false,
                 UserId = user.Id,
                 AddedDate = DateTime.UtcNow,
-                ExpiryDate = DateTime.UtcNow.AddMonths(6),
+                ExpiryDate = DateTime.UtcNow.AddSeconds(30),
                 Token = RandomString(35) + Guid.NewGuid()
             };
 
