@@ -1,0 +1,11 @@
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\corewebapi.exe
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\appsettings.Development.json
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\appsettings.json
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\corewebapi.dll
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\corewebapi.deps.json
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\corewebapi.runtimeconfig.json
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\corewebapi.pdb
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\Microsoft.OpenApi.dll
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Project\OCBC\OCBC-H8\Sesi13\corewebapi\corewebapi\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
