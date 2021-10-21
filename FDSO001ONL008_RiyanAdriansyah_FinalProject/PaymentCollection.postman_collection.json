@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "1def7f7e-96d1-4d97-8c50-21a7415ac1aa",
+		"name": "PaymentCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Registrasi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"dadun\",\r\n  \"email\": \"dadun@gmail.com\",\r\n  \"password\": \"Test@123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_mysql}}/api/AuthManagement/Register",
+							"host": [
+								"{{url_mysql}}"
+							],
+							"path": [
+								"api",
+								"AuthManagement",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"jsonData = pm.response.json();\r",
+									"pm.environment.set(\"token\", jsonData.result.token);\r",
+									"pm.environment.set(\"refresh_token\", jsonData.result.refreshToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"riyan@gmail.com\",\r\n  \"password\": \"Test@123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/AuthManagement/Login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"AuthManagement",
+								"Login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQ5NWRlNWJkLTA5NTgtNGIyNC05MGM4LTEyMGE0NGRmOTJkYSIsImVtYWlsIjoicml5YW5AZ21haWwuY29tIiwic3ViIjoicml5YW5AZ21haWwuY29tIiwianRpIjoiOGM3ZGJlNGMtOGE5Ni00ZGM2LWI3YmItYzhmNGIyZjkzY2UwIiwibmJmIjoxNjM0ODI1Mjk2LCJleHAiOjE2MzQ4MjcwOTYsImlhdCI6MTYzNDgyNTI5Nn0.T-rWiGnKmjz3r_WA2AFUn0jSf0Mgp6Fod0KyojHxPHQ\",\r\n  \"refreshToken\": \"KIUZKJQBG9P0RX283ALNWA5SCTJYUWWLHX8d878a0be-1e60-4973-8ac6-40da71b1ee4f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}​/api/AuthManagement/RefreshToken",
+							"host": [
+								"{{url}}​"
+							],
+							"path": [
+								"api",
+								"AuthManagement",
+								"RefreshToken"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CRUD",
+			"item": [
+				{
+					"name": "GET ALL",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQ5NWRlNWJkLTA5NTgtNGIyNC05MGM4LTEyMGE0NGRmOTJkYSIsImVtYWlsIjoicml5YW5AZ21haWwuY29tIiwic3ViIjoicml5YW5AZ21haWwuY29tIiwianRpIjoiZTM4NzA5NGEtMmQwOC00OWI1LTgyMDQtZDk1ZjJmMzZkNjFjIiwibmJmIjoxNjM0ODI1ODEyLCJleHAiOjE2MzQ4Mjc2MTIsImlhdCI6MTYzNDgyNTgxMn0.sx-HFUKvMWeUVXkBXpARBPAcc6QXs3WyeCOtm0e964o",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/Bank",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Bank"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Bank/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Bank",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cardOwnerName\": \"test\",\r\n  \"cardNumber\": \"3464634634\",\r\n  \"expirationDate\": \"01/04/2023\",\r\n  \"securityCode\": \"235346346345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Bank",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Bank"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"paymentDetailId\" : 5,\r\n  \"cardOwnerName\": \"test2\",\r\n  \"cardNumber\": \"3464634634\",\r\n  \"expirationDate\": \"01/04/2023\",\r\n  \"securityCode\": \"235346346345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/Bank/5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Bank",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/Bank/6",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"Bank",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

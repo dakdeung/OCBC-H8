@@ -1,0 +1,14 @@
+=======================Cara Penggunaan Heroku=======================
+
+Untuk Cara penggunaan heroku dapat di akses melalui link
+
+final-project-1-riyan.herokuapp.com/ (POSTGRE)
+
+atau 
+
+final-project-local.herokuapp.com/ (MYSQL)
+
+Untuk mengetestnya saya sarankan dilakukan melalui postman karena dibutuhkan permission login
+Untuk cara penggunaan postmannya dapat dilihat pada file "Cara Penggunaan.txt"
+
+Terima Kasih
