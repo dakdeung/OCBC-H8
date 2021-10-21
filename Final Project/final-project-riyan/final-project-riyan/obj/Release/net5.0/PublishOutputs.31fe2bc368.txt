@@ -1,0 +1,11 @@
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\final-project-riyan.exe
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\appsettings.Development.json
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\appsettings.json
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\final-project-riyan.dll
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\final-project-riyan.deps.json
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\final-project-riyan.runtimeconfig.json
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\final-project-riyan.pdb
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\Microsoft.OpenApi.dll
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Project\OCBC\OCBC-H8\Final Project\final-project-riyan\final-project-riyan\bin\Release\net5.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

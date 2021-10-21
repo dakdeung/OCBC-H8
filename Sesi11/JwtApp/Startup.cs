@@ -49,28 +49,30 @@ namespace JwtApp
             ));
 
             //JWT
-            services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
-
-            services.AddAuthentication(options => {
+            var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
+            var tokenValidationParams = new TokenValidationParameters
+            {
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key),
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateLifetime = true,
+                RequireExpirationTime = false,
+                ClockSkew = TimeSpan.Zero
+            };
+            services.AddSingleton(tokenValidationParams);
+            services.AddAuthentication(options =>
+            {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
-            .AddJwtBearer(jwt => {
-                var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:Secret"]);
-
+            .AddJwtBearer(jwt =>
+            {
                 jwt.SaveToken = true;
-                jwt.TokenValidationParameters = new TokenValidationParameters {
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = false,
-                    ValidateAudience =false,
-                    ValidateLifetime = true,
-                    RequireExpirationTime = false
-                };
-
-                services.AddSingleton(jwt.TokenValidationParameters);
+                jwt.TokenValidationParameters = tokenValidationParams;
             });
+            services.Configure<JwtConfig>(Configuration.GetSection("JwtConfig"));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                     .AddEntityFrameworkStores<ApiDbContext>();
