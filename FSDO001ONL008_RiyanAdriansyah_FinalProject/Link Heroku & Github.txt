@@ -1,0 +1,7 @@
+//Project dengan database Postgre
+Github: https://github.com/dakdeung/OCBC-H8/tree/main/FSDO001ONL008_RiyanAdriansyah_FinalProject/PaymentApp-Postgre
+Heroku: https://final-project-1-riyan.herokuapp.com/
+
+//Project dengan database MySql
+Github: https://github.com/dakdeung/OCBC-H8/tree/main/FSDO001ONL008_RiyanAdriansyah_FinalProject/PaymentApp-Postgre
+Heroku: https://final-project-local.herokuapp.com/
