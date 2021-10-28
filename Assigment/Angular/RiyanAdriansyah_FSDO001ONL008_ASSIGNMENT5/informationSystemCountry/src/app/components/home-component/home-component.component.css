@@ -1,0 +1,16 @@
+h1{
+  text-align: center;
+}
+
+h2 , p{
+  color: #ffffff;
+}
+
+div.col , div.col-md-6{
+  padding: 16px;
+}
+
+div.card-body{
+  padding: 16px;
+  background: #c7882a;
+}

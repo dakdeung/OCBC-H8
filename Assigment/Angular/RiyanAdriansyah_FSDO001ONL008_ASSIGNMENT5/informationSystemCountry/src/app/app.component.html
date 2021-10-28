@@ -1,0 +1,11 @@
+<h1>Fun Facts About Countries</h1>
+
+<div class="button">
+  <button type="button" (click)="showHome()">Go Back To Homepage</button>
+  <button type="button" (click)="showAll()">List of all Countries</button>
+</div>
+
+<!-- <ng-template *ngFor="let param of params;"> -->
+<app-home-component *ngIf="isHome"></app-home-component>
+<app-all-countries-component *ngIf="isAll" (itemEvent)="showFromAll()"></app-all-countries-component>
+<!-- </ng-template> -->

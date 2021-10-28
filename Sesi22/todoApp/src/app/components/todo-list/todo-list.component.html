@@ -1,0 +1,36 @@
+<app-add-todo-form (newTodoEvent)="addTodo($event)">
+</app-add-todo-form>
+<h1 style="text-align: center;">Todo</h1>
+<ol *ngFor="let todo of todos; let i = index;" class="list-group">
+  <li *ngIf="!todo.completed" class="list-group-item d-flex justify-content-between align-items-start" >
+    <div class="ms-3 me-auto">
+      <div *ngIf="!todo.edited" class="content {{(todo.completed ? 'done' : '')}}">
+        {{i + 1}}.{{todo.context}}
+      </div>
+    </div>
+    <input *ngIf="todo.edited"  type="text" name="inputTodo" [value]="inputTodo" class="form-control" [(ngModel)]="inputTodo"/>
+    <button *ngIf="!todo.edited" style="margin-right: 5px;" class="btn btn-sm completed" (click)="onEditable(i)">
+      <i class="bi bi-pencil"></i>
+    </button>
+    <button *ngIf="todo.edited" style="margin-right: 5px;margin-left: 5px;" class="btn btn-success btn-sm completed" (click)="onSaved(i)">
+      <i class="bi bi-box-arrow-down"></i>
+    </button>
+    <button style="margin-right: 5px;" class="btn btn-warning btn-sm completed" (click)="toggleDone(i)">
+      <i class="bi bi-check-circle"></i>
+    </button>
+    <button class="btn btn-danger btn-sm" (click)="deleteTodo(i)">
+      <i class="bi bi-trash-fill"></i>
+    </button>
+  </li>
+</ol>
+
+<h1 style="text-align: center;">Finish</h1>
+<ol *ngFor="let todo of todos; let i = index;" class="list-group">
+  <li *ngIf="todo.completed" class="list-group-item d-flex justify-content-between align-items-start" >
+    <div class="ms-3 me-auto">
+      <div *ngIf="!todo.edited" class="content {{(todo.completed ? 'done' : '')}}">
+        {{i + 1}}.{{todo.context}}
+      </div>
+    </div>
+  </li>
+</ol>

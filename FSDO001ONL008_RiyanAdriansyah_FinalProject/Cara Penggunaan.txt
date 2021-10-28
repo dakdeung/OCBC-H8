@@ -15,6 +15,12 @@ Github : https://github.com/dakdeung/OCBC-H8/tree/main/FDSO001ONL008_RiyanAdrian
 - Hasil screenshoot postman dan swagger
 - Link heroku dan github
 
+**Link Pengujian
+- Mysql   : https://final-project-riyan.herokuapp.com/ + endpoint
+- Postgre : https://final-project-1-riyan.herokuapp.com/ + endpoint
+- Local   : https://localhost:5001/ + endpoint atau 
+            https://localhost:[port docker]/ + endpoint
+
 **Langka Penggunaan
 1. extract file FSDO001ONL008_RiyanAdriansyah_FinalProject
 2. buka folder yang sudah di extract dengan visual studio code / visual studio comunnity
@@ -24,19 +30,18 @@ Github : https://github.com/dakdeung/OCBC-H8/tree/main/FDSO001ONL008_RiyanAdrian
    menggunakan visual studio community
 5. selanjutnya dapat dilakukan pengujian menggunakan Postman/swagger
 
-**Link Pengujian
-- Mysql   : https://final-project-riyan.herokuapp.com/ + endpoint
-- Postgre : https://final-project-1-riyan.herokuapp.com/ + endpoint
-- Local   : https://localhost:5001/ + endpoint atau localhost:[port docker]/ + endpoint
-
 **Pengujian Swagger
 1.Untuk pengujian swagger dapat diakses melalui 'https://localhost:5001/swagger/index.html'.
-2.Pertama-tama kita perlu membuat akun terlebih dahulu terdapat pada bagian "AuthManagement" lalu klik "Try it out" pada endpoint 
-  /api/AuthManagement/Register dan ubah body bagian username, email dan password , pada password terdapat validasi yang mana kita 
-  diminta untuk memasukan kombinasi campuran symbol, huruf besar contoh '@string1A' lalu tekan execute.
-3.Setelah berhasil selanjutkan lanjut melakukan login pada endpoint /api/AuthManagement/Login dengan mengisikan email dan password.
-4.Untuk memperbaharui token dapat dilakukan pada bagian endpoint /api/AuthManagement/RefreshToken, disana kita diminta untuk memasukan Token dan RefreshToken yang didapat pada saat login
-5.Setelah Berhasil login kita copy kan token yang di dapat lalu klik tombol "Autorize" yang terdapat di kanan atas lalu paste kan didalam text box, tapi tambah kan Bearer didepannya 
+2.Pertama-tama kita perlu membuat akun terlebih dahulu terdapat pada bagian "AuthManagement" lalu klik 
+  "Try it out" pada endpoint /api/AuthManagement/Register dan ubah body bagian username, email dan 
+  password , pada password terdapat validasi yang mana kita diminta untuk memasukan kombinasi campuran 
+  symbol, huruf besar, angka contoh '@string1A' lalu tekan execute.
+3.Setelah berhasil selanjutkan lanjut melakukan login pada endpoint /api/AuthManagement/Login dengan 
+  mengisikan email dan password.
+4.Untuk memperbaharui token dapat dilakukan pada bagian endpoint /api/AuthManagement/RefreshToken, 
+  disana kita diminta untuk memasukan Token dan RefreshToken yang didapat pada saat login
+5.Setelah Berhasil login kita copy kan token yang di dapat lalu klik tombol "Autorize" yang terdapat di
+  kanan atas lalu paste kan didalam text box, tapi tambah kan Bearer didepannya 
   ex: Bearer 0912KSJe102931(Token)
 6.Selanjutnya pada bagian Bank terdapat beberapa endpoint seperti:
   [GET] /api/Bank         => digunakan untuk menampilkan seluruh data
