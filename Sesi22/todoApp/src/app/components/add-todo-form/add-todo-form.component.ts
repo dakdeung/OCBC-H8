@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Todo } from 'src/app/models/todo';
 
 @Component({
@@ -10,18 +11,34 @@ export class AddTodoFormComponent implements OnInit {
 
   @Output() newTodoEvent = new EventEmitter<Todo>();
 
-  inputTodo: string = "";
+  // inputTodo: string = "";
+  isSubmit = false;
 
-  addTodo(){
-    const todo:Todo = {
-      context: this.inputTodo,
-      completed: false,
-      edited: false
-    };
-    this.newTodoEvent.emit(todo)
-    this.inputTodo = "";
+  todoForm = new FormGroup({
+    inputTodo: new FormControl('',[Validators.required, Validators.minLength(10)])
+  })
+
+  get inputTodo(){
+    return this.todoForm.get('inputTodo');
   }
 
+  addTodo(){
+    this.isSubmit = true;
+    if(!this.inputTodo?.invalid){
+      const todo:Todo = {
+        context: this.todoForm.value.inputTodo,
+        completed: false,
+        edited: false
+      };
+      this.newTodoEvent.emit(todo)
+    }
+  }
+
+  handleIsSubmitState(){
+    if(this.isSubmit == true){
+      this.isSubmit = false
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {

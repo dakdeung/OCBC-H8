@@ -6,6 +6,7 @@
 </div>
 
 <!-- <ng-template *ngFor="let param of params;"> -->
-<app-home-component *ngIf="isHome"></app-home-component>
+<app-home-component *ngIf="isHome" (itemEvent)="showFromHome()"></app-home-component>
 <app-all-countries-component *ngIf="isAll" (itemEvent)="showFromAll()"></app-all-countries-component>
+<app-country-detail-component *ngIf="isDetails" ></app-country-detail-component>
 <!-- </ng-template> -->
