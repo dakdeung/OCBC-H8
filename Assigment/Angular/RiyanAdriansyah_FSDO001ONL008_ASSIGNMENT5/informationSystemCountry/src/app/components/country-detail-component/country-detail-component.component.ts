@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-country-detail-component',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountryDetailComponentComponent implements OnInit {
 
+  @Input() country:any;
+  @Output() backEvent = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onButtonClick(){
+    this.backEvent.emit();
   }
 
 }

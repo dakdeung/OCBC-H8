@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from 'src/app/models/todo';
-
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Todo } from '../../models/Todo';
 
 @Component({
   selector: 'app-todo-list',
@@ -10,10 +10,18 @@ import { Todo } from 'src/app/models/todo';
 export class TodoListComponent implements OnInit {
 
   isEditable= false;
-  inputTodo: string = "";
+  isDone = false;
   todos:Todo[]=[];
 
   constructor() { }
+
+  todoForm = new FormGroup({
+    inputTodo: new FormControl('',[Validators.required, Validators.minLength(10)])
+  })
+
+  get inputTodo(){
+    return this.todoForm.get('inputTodo');
+  }
 
   ngOnInit(): void {
     this.todos = [
@@ -31,10 +39,10 @@ export class TodoListComponent implements OnInit {
   }
 
   toggleDone(id:number){
-    this.todos.map((v,i) => {
-      if(i == id) v.completed = !v.completed;
-      return v;
-    })
+      this.todos.map((v,i) => {
+        if(i == id) v.completed = !v.completed;
+        return v;
+      })
   }
 
   deleteTodo(id:number){
@@ -49,20 +57,27 @@ export class TodoListComponent implements OnInit {
     this.todos.map((v,i) => {
       if(i == id) {
         v.edited = !v.edited;
-        this.inputTodo = v.context;
       }
       return v;
     })
   }
 
   onSaved(id:number){
-    this.todos.map((v,i) => {
-      if(i == id) {
-        v.edited = !v.edited;
-        v.context = this.inputTodo;
-      }
-      return v;
-    })
+    this.isDone = true;
+    if(!this.inputTodo?.invalid){
+      this.todos.map((v,i) => {
+        if(i == id) {
+          v.edited = !v.edited;
+          v.context = this.todoForm.value.inputTodo;
+        }
+        return v;
+      })
+    }
   }
 
+  handleIsSubmitState(){
+    if(this.isDone == true){
+      this.isDone = false
+    }
+  }
 }

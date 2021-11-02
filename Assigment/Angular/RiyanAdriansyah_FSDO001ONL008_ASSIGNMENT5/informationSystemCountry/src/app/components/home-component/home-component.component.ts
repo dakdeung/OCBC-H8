@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Country } from 'src/app/models/Country';
 
 @Component({
@@ -8,57 +8,29 @@ import { Country } from 'src/app/models/Country';
 })
 export class HomeComponentComponent implements OnInit {
 
-  country:Country[]=[]
+  @Input() country:Country[]=[]
+  bigArea:any
+  bigPopulated:any
   @Output() itemEvent = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit(): void {
-    this.country = [
-      {
-        name: "UNITED STATED",
-        capital: "Washington DC",
-        area: 95251039,
-        population:10923920,
-        gdp:16982382,
-        currency:"United States Dollar"
-      },
-      {
-        name: "CHINA",
-        capital: "Beijing",
-        area: 95251039,
-        population:10923920,
-        gdp:16982382,
-        currency:"United States Dollar"
-      },
-      {
-        name: "Japan",
-        capital: "Tokyo",
-        area: 95251039,
-        population:10923920,
-        gdp:16982382,
-        currency:"United States Dollar"
-      },
-      {
-        name: "Russia",
-        capital: "Moscow",
-        area: 95251039,
-        population:10923920,
-        gdp:16982382,
-        currency:"United States Dollar"
-      },
-      {
-        name: "Canada",
-        capital: "Ottawa",
-        area: 95251039,
-        population:10923920,
-        gdp:16982382,
-        currency:"United States Dollar"
-      },
-    ]
+    this.bigPopulated = this.getThreeBigPopulated(this.country);
+    this.bigArea = this.getThreeBigArea(this.country);
   }
 
-  onCardClick(){
-    this.itemEvent.emit();
+  onCardClick(country: any){
+    this.itemEvent.emit(country);
+  }
+
+  getThreeBigPopulated(country: Country[]){
+    return country.sort((a, b) => b.population - a.population)
+    .slice(0, 3)
+  }
+
+  getThreeBigArea(country: Country[]){
+    return country.sort((a, b) => b.area - a.area)
+    .slice(0, 3)
   }
 
 }
