@@ -1,8 +1,7 @@
 import { Component, Inject } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { EmployeeService } from 'src/app/services/employee.service';
-// import { MustMatch } from "../../customValidators/mustMatch";
 
 export interface Role{
   id:string,
@@ -45,8 +44,9 @@ export class DialogComponent {
     password: new FormControl('',[Validators.required, Validators.minLength(6)]),
     confirmPassword: new FormControl('',[Validators.required, Validators.minLength(6)]),
   },
-    // this.MustMatch('password', 'confirmPassword')
-  )
+  {
+    validators: [this.match('password', 'confirmPassword')]
+  })
 
   ngOnInit(): void {
     this.isEdit = this.data.isEdit
@@ -77,21 +77,39 @@ export class DialogComponent {
 
   get f (){ return this.employeeForm.controls}
 
-  MustMatch(controlName: string, matchingControlName: string){
-    return(formGroup: AbstractControl)=>{
-      const control = formGroup.value.password
-      const matching = formGroup.value.confirmPassword;
-      if(matching.errors && !matching.errors.MustMatch){
-        return
+  // MustMatch(controlName: string, matchingControlName: string){
+  //   return(formGroup: AbstractControl)=>{
+  //     const control = formGroup.value.password
+  //     const matching = formGroup.value.confirmPassword;
+  //     if(matching.errors && !matching.errors.MustMatch){
+  //       return
+  //     }
+  //     if(control.value !== matching.value){
+  //       matching.setErrors({MustMatch:true});
+  //     }
+  //     else{
+  //       matching.setErrors(null);
+  //     }
+  //   }
+  // }
+  match(controlName: string, checkControlName: string): ValidatorFn {
+    return (controls: AbstractControl) => {
+      const control = controls.get(controlName);
+      const checkControl = controls.get(checkControlName);
+
+      if (checkControl!.errors && !checkControl!.errors.matching) {
+        return null;
       }
-      if(control.value !== matching.value){
-        matching.setErrors({MustMatch:true});
+
+      if (control!.value !== checkControl!.value) {
+        controls.get(checkControlName)!.setErrors({ matching: true });
+        return { matching: true };
+      } else {
+        return null;
       }
-      else{
-        matching.setErrors(null);
-      }
-    }
+    };
   }
+
 
   get title(){
     return this.employeeForm.get('title')

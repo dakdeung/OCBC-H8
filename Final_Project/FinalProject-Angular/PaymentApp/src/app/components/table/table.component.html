@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body style="padding: 16px;">
+  <button class="btn btn-primary" type="button">Add Employee</button>
+    <div class="table-responsive" style="box-shadow: 0px 0px 9px;border-radius: 15px;">
+        <table class="table">
+            <thead class="thead-dark text-center" style="box-shadow: 0px 0px 6px;background-color: #212529;">
+                <tr>
+                    <th *ngFor="let head of heads" style="color: white;">{{head}}</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let a of payment; let i = index">
+                    <td>{{a.paymentDetailId}}</td>
+                    <td>{{a.cardOwnerName}}</td>
+                    <td>{{a.cardNumber}}</td>
+                    <td>{{a.expirationDate}}</td>
+                    <td>{{a.securityCode}}</td>
+                    <!-- <td><a (click)="openDialog(true,false,data[i],i)">Edit</a><a (click)="openDialog(false,true,data[i],i)"> | Delete</a></td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
