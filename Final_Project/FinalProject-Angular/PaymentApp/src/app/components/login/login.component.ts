@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   //LOGIN FORM
   loginForm = new FormGroup({
     emailLogin: new FormControl('',[Validators.required, Validators.email]),
-    passwordLogin: new FormControl('',[Validators.required, Validators.minLength(6)]),
+    passwordLogin: new FormControl('',[Validators.required]),
   })
 
   get emailLogin(){
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   registerForm = new FormGroup({
     username: new FormControl('',[Validators.required, Validators.minLength(6)]),
     email: new FormControl('',[Validators.required, Validators.email]),
-    password: new FormControl('',[Validators.required, Validators.minLength(6)]),
+    password: new FormControl('',[Validators.required, Validators.minLength(6),Validators.pattern(/^[a-zA-Z0-9!@#$%^&*()]+$/)]),
     confirmPassword: new FormControl('',[Validators.required]),
   },
     {

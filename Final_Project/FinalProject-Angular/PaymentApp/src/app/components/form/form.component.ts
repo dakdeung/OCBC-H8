@@ -21,8 +21,8 @@ export class FormComponent implements OnInit {
 
   inputForm = new FormGroup({
     cardOwnerName: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    cardNumber: new FormControl('', [Validators.required, Validators.minLength(16)]),
-    expirationDate: new FormControl('', [Validators.required]),
+    cardNumber: new FormControl('', [Validators.required, Validators.minLength(16),Validators.maxLength(16),Validators.pattern(/^[0-9]+$/)]),
+    expirationDate: new FormControl('', [Validators.required,Validators.maxLength(5),Validators.pattern(/^[0-9/]+$/)]),
     securityCode: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(4)])
   })
 

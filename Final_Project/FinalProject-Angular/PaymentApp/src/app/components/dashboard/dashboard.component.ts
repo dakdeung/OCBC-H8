@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Payment } from 'src/app/models/payment';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +14,7 @@ export class DashboardComponent implements OnInit {
   isChange: boolean = false
   isEdit: boolean = false
   data: any
-  constructor() { }
+  constructor(public dialog: MatDialog, public router: Router) { }
 
   ngOnInit(): void {
   }
@@ -29,4 +32,20 @@ export class DashboardComponent implements OnInit {
     this.isEdit = bool;
   }
 
+  openDialog(dataDialog?:any){
+    console.log(dataDialog);
+
+    let dialogRef = this.dialog.open(DialogComponent,{data:{isDelete: false, Payment: dataDialog}});
+
+    dialogRef.afterClosed().subscribe(result => {
+      // this.getUsers();
+      if(result === "Delete"){
+
+      }else if(result === "Logout"){
+        localStorage.removeItem('app_token')
+        this.router.navigate(['/login'])
+      }
+
+    })
+  }
 }

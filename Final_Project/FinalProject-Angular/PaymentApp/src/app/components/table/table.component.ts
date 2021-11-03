@@ -1,8 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { Payment } from 'src/app/models/payment';
 import { PaymentService } from 'src/app/services/payment.service';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-table',
@@ -19,7 +21,11 @@ export class TableComponent implements OnInit {
   dtTrigger: Subject<any> = new Subject<any>();
   count = 0
 
-  constructor(private paymentService: PaymentService, public router: Router) { }
+  constructor(
+    private paymentService: PaymentService,
+    public router: Router,
+    public dialog: MatDialog,
+  ) { }
 
   ngOnInit(): void {
     this.dtOptions = {
@@ -94,6 +100,23 @@ export class TableComponent implements OnInit {
       isEdit: true
     }
     this.itemEvent.emit(dataEdit)
+  }
+
+  openDialog(dataDialog:any){
+    console.log(dataDialog);
+
+    let dialogRef = this.dialog.open(DialogComponent,{data:{isDelete: true, Payment: dataDialog}});
+
+    dialogRef.afterClosed().subscribe(result => {
+      // this.getUsers();
+      if(result === "Delete"){
+        this.deletePayment(dataDialog.paymentDetailId)
+      }else if(result === "Logout"){
+        localStorage.removeItem('app_token')
+        this.router.navigate(['/login'])
+      }
+
+    })
   }
 
   // this.payment.putPayment(this.updobj, result.id).subscribe(x => location.reload())

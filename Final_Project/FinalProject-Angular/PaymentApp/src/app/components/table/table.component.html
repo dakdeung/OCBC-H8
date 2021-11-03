@@ -15,7 +15,8 @@
                     <td (click)="onEdit(payment[i])">{{a.cardNumber}}</td>
                     <td (click)="onEdit(payment[i])">{{a.expirationDate}}</td>
                     <!-- <td><a (click)="openDialog(true,false,data[i],i)">Edit</a> -->
-                      <td><button class="btn btn-danger btn-sm" style="float: right;margin-top: 10px;" (click)="deletePayment(a.paymentDetailId)">
+                      <td><button class="btn btn-danger btn-sm" style="float: right;margin-top: 10px;" (click)="openDialog(a)">
+                        <!-- deletePayment(a.paymentDetailId) -->
                         <i class="bi bi-trash-fill"></i>
                       </button></td>
                 </tr>
