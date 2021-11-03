@@ -14,16 +14,16 @@ export class LoginComponent implements OnInit {
 
   //LOGIN FORM
   loginForm = new FormGroup({
-    email: new FormControl('',[Validators.required, Validators.minLength(10), Validators.email]),
-    password: new FormControl('',[Validators.required, Validators.minLength(6)]),
+    emailLogin: new FormControl('',[Validators.required, Validators.email]),
+    passwordLogin: new FormControl('',[Validators.required, Validators.minLength(6)]),
   })
 
   get emailLogin(){
-    return this.loginForm.get('email')
+    return this.loginForm.get('emailLogin')
   }
 
   get passwordLogin(){
-    return this.loginForm.get('password')
+    return this.loginForm.get('passwordLogin')
   }
 
   // END LOGIN FORM
@@ -35,11 +35,11 @@ export class LoginComponent implements OnInit {
     username: new FormControl('',[Validators.required, Validators.minLength(6)]),
     email: new FormControl('',[Validators.required, Validators.email]),
     password: new FormControl('',[Validators.required, Validators.minLength(6)]),
-    // confirmPassword: new FormControl('',[Validators.required]),
-  })
-    // {
-    //   validators: [this.match('password', 'confirmPassword')]
-    // })
+    confirmPassword: new FormControl('',[Validators.required]),
+  },
+    {
+      validators: [this.match('password', 'confirmPassword')]
+    })
 
   get username(){
     return this.registerForm.get('username')
@@ -63,13 +63,21 @@ export class LoginComponent implements OnInit {
   }
 
   signIn(){
-    this.userService.signIn(this.loginForm.value)
+    const body:any = {
+      email: this.loginForm.value.emailLogin,
+      password: this.loginForm.value.passwordLogin
+    }
+    this.userService.signIn(body)
     .subscribe((res: any) => {
       if(res) {
+        alert(res.message);
         this.userService.setAuthorizationToken(res.result.token)
         // this.loginForm.inputData.reset()
         this.router.navigate([ '', 'dashboard' ])
       }
+    },
+    (err) => {
+        alert(err);
     })
   }
 
@@ -77,11 +85,15 @@ export class LoginComponent implements OnInit {
     this.userService.signUp(this.registerForm.value)
     .subscribe((res: any) => {
       if(res) {
+        alert(res);
         this.userService.setAuthorizationToken(res.token)
 
         // this.loginForm.inputData.reset()
-        this.router.navigate([ '', '/' ])
+        location.reload()
       }
+    },
+    (err) => {
+        alert(err);
     })
   }
 

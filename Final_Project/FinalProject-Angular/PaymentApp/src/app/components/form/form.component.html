@@ -1,0 +1,34 @@
+<form [formGroup]="inputForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>CARD OWNER NAME</label>
+    <input type="text" formControlName="cardOwnerName">
+    <span style="color: red" *ngIf="cardOwnerName && cardOwnerName.touched && cardOwnerName.invalid">
+      Name not valid!
+    </span>
+  </div>
+  <div>
+    <label>CARD NUMBER</label>
+    <input type="text" formControlName="cardNumber">
+    <span style="color: red" *ngIf="cardNumber && cardNumber.touched && cardNumber.invalid">
+      You must input 16 digit card number
+    </span>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label>VALID THROUGH</label>
+      <input type="text" formControlName="expirationDate">
+      <span style="color: red" *ngIf="expirationDate && expirationDate.touched && expirationDate.invalid">
+        Valid Date not valid.
+      </span>
+    </div>
+    <div class="col-md-6">
+      <label>SECURITY CODE</label>
+      <input type="text" formControlName="securityCode">
+      <span style="color: red" *ngIf="securityCode && securityCode.touched && securityCode.invalid">
+        You must input 4 digit security code
+      </span>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">{{button}}</button>
+</form>
+

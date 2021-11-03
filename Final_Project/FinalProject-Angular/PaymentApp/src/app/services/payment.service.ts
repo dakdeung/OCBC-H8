@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { Payment } from '../models/payment';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,29 @@ export class PaymentService {
     const api = `${this.endpoint}/api/Bank`
 
     return this.http.get(api)
+    .pipe( catchError(this.handleError) )
+  }
+
+  //POST
+  postPayment(payment: Payment):  Observable<any> {
+    let api = `${this.endpoint}/api/Bank`;
+    return this.http
+      .post(api, payment)
+      .pipe(catchError(this.handleError));
+  }
+
+  // PUT
+  putPayment(id: Number, payment: Payment): Observable<any> {
+    let api = `${this.endpoint}/api/Bank/${id}`;
+    return this.http
+      .put(api, payment)
+      .pipe(catchError(this.handleError));
+  }
+
+  deletePayment (id:number) : Observable<any> {
+    let api = `${this.endpoint}/api/Bank/${id}`;
+
+    return this.http.delete(api)
     .pipe( catchError(this.handleError) )
   }
 

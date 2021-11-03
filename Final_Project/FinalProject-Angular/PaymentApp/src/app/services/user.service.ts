@@ -30,6 +30,11 @@ export class UserService {
     return localStorage.setItem('app_token', token)
   }
 
+  get isLoggedIn(): boolean {
+    let authToken = localStorage.getItem('app_token');
+    return (authToken !== null) ? true : false;
+  }
+
   signUp(user: User): Observable<any>{
     const api = `${this.endpoint}/api/AuthManagement/Register`;
 
