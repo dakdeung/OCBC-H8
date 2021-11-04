@@ -82,11 +82,15 @@ export class LoginComponent implements OnInit {
   }
 
   signUp(){
-    this.userService.signUp(this.registerForm.value)
+    const regis:any = {
+      username: this.registerForm.value.username,
+      email: this.registerForm.value.email,
+      password: this.registerForm.value.password
+    }
+    this.userService.signUp(regis)
     .subscribe((res: any) => {
       if(res) {
-        alert(res);
-        this.userService.setAuthorizationToken(res.token)
+        alert("Registrasi Berhasil");
 
         // this.loginForm.inputData.reset()
         location.reload()

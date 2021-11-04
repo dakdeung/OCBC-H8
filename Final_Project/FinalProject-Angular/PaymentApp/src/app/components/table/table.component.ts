@@ -78,12 +78,14 @@ export class TableComponent implements OnInit {
     this.paymentService.deletePayment(id).subscribe(
       (res) => {
         if (res.message) {
-          alert(res.message);
+          // alert(res.message);
+          this.openNotif(res.message)
           this.getPayment()
         }
       },
       (err) => {
-          alert(err);
+          // alert(err);
+          this.openNotif(err)
       }
     );
   }
@@ -116,6 +118,16 @@ export class TableComponent implements OnInit {
         this.router.navigate(['/login'])
       }
 
+    })
+  }
+
+  openNotif(dataDialog?:any){
+    console.log(dataDialog);
+
+    let dialogRef = this.dialog.open(DialogComponent,{data:{isNotif: true, notifikasi: dataDialog}});
+
+    dialogRef.afterClosed().subscribe(result => {
+      // this.getUsers();
     })
   }
 
