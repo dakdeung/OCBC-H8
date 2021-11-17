@@ -1,19 +1,11 @@
-import sqlite3
+import os
+from config import db
 
-try:
-    sqliteConnection = sqlite3.connect('final_proj.db')
-    cursor = sqliteConnection.cursor()
-    print("Database created and Successfully Connected to SQLite")
+# Delete database file if it exists currently
+if os.path.exists('final_proj.db'):
+    os.remove('final_proj.db')
 
-    sqlite_select_Query = "select sqlite_version();"
-    cursor.execute(sqlite_select_Query)
-    record = cursor.fetchall()
-    print("SQLite Database Version is: ", record)
-    cursor.close()
+# Create the database
+db.create_all()
 
-except sqlite3.Error as error:
-    print("Error while connecting to sqlite", error)
-finally:
-    if sqliteConnection:
-        sqliteConnection.close()
-        print("The SQLite connection is closed")
+db.session.commit()
