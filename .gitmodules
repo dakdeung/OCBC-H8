@@ -1,3 +1,9 @@
 [submodule "Assigment/Python/h8ocbc_deployment"]
 	path = Assigment/Python/h8ocbc_deployment
 	url = https://github.com/dakdeung/h8ocbc_deploy
+[submodule "Final_Project/h8ocbc_milestone1-008"]
+	path = Final_Project/h8ocbc_milestone1-008
+	url = https://github.com/dakdeung/movie_app.git
+[submodule "Final_Project/h8ocbc_Milestone1-008"]
+	path = Final_Project/h8ocbc_Milestone1-008
+	url = https://github.com/dakdeung/movie_app.git
